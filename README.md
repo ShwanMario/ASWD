@@ -8,11 +8,17 @@ python==3.7.7
 
 ## Python packages
 pytorch==1.4.0 
+
 torchvision==0.5.0
+
 cudatoolkit==10.1.243
+
 cupy==7.40
+
 numpy==1.18.1
+
 pot==0.7.0
+
 imageio=2.8.0
 
 # Running the experiments
