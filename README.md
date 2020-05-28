@@ -1,7 +1,11 @@
 # Augmented-Sliced-Wasserstein-Distances
 Augmented Sliced Wasserstein Distances
 
-#Prerequisite
+# Prerequisite
+## Python version
+
+python==3.7.7
+
 ## Python packages
 pytorch==1.4.0 
 torchvision==0.5.0
