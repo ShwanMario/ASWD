@@ -19,7 +19,7 @@ pot==0.7.0
 
 imageio=2.8.0
 
-# Running the experiments
+## Running the experiments
 This code allows you to evaluate the performances of GANs trained with different variants of sliced-based Wasserstein distance on the CIFAR10 dataset. To train and evaluate the model, run the following command.
 
 ```
