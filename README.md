@@ -1,5 +1,5 @@
 # Augmented-Sliced-Wasserstein-Distances
-
+Under review
 ## Python version
 
 python==3.7.7
