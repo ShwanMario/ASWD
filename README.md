@@ -1,5 +1,5 @@
 # Augmented-Sliced-Wasserstein-Distances
-Under review
+Code to reproduce the experimental results in the ASWD paper
 ## Python version
 
 python==3.7.7
