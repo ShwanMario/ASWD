@@ -1,6 +1,5 @@
 # Augmented-Sliced-Wasserstein-Distances
 
-This repository is to reproduce the experimental results in the paper **[Augmented Sliced Wasserstein Distances](https://arxiv.org/abs/2006.08812)**.
 ## Prerequisites
 
 ### Python packages
@@ -34,12 +33,12 @@ Precalculated statistics for datasets
 
 are provided at: http://bioinf.jku.at/research/ttur/.
 ## Project & Script Descriptions
-The sliced Wasserstein flow example can be found in the [jupyter notebook](https://github.com/xiongjiechen/ASWD/blob/master/Sliced%20Waaserstein%20Flow.ipynb).
+The sliced Wasserstein flow example can be found in the [jupyter notebook](https://anonymous.4open.science/repository/e55153b2-70be-4089-9362-1443ddfaece4/Sliced%20Waaserstein%20Flow.ipynb).
 
 The following scripts belong to the generative modelling example:
-- [main.py](https://github.com/xiongjiechen/ASWD/blob/master/main.py) : executable file.
-- [utils.py](https://github.com/xiongjiechen/ASWD/blob/master/utils.py) : contains implementations of different sliced-based Wasserstein distances.
-- [TransformNet.py](https://github.com/xiongjiechen/ASWD/blob/master/TransformNet.py.py) : architectures of neural networks used to map samples. 
+- [main.py](https://anonymous.4open.science/repository/e55153b2-70be-4089-9362-1443ddfaece4/main.py) : executable file.
+- [utils.py](https://anonymous.4open.science/repository/e55153b2-70be-4089-9362-1443ddfaece4/utils.py) : contains implementations of different sliced-based Wasserstein distances.
+- [TransformNet.py](https://anonymous.4open.science/repository/e55153b2-70be-4089-9362-1443ddfaece4/TransformNet.py.py) : architectures of neural networks used to map samples. 
 
 ## Experiment options
 This code allows you to evaluate the performances of GANs trained with different variants of sliced-based Wasserstein distance on the CIFAR10 dataset. To train and evaluate the model, run the following command.
