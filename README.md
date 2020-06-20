@@ -1,6 +1,6 @@
 # Augmented-Sliced-Wasserstein-Distances
 
-This repository is to reproduce the experimental results in the paper **[Augmented Sliced Wasserstein Distances](https://arxiv.org/abs/2006.08812)** by **[Xiongjie Chen](https://github.com/xiongjiechen), [Yongxin Yang](https://github.com/wOOL)** and **[Yunpeng Li](https://github.com/li-yp)**.
+This repository is to reproduce the experimental results in the paper **[Augmented Sliced Wasserstein Distances](https://arxiv.org/abs/2006.08812)**.
 ## Prerequisites
 
 ### Python packages
