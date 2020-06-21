@@ -93,11 +93,10 @@ def main():
                         help='R')
     parser.add_argument('--latent-size', type=int, default=32,
                         help='Latent size')
-    parser.add_argument('--dataset', type=str, default='MNIST',
+    parser.add_argument('--dataset', type=str, default='CIFAR',
                         help='(CELEBA|CIFAR)')
     parser.add_argument('--model-type', type=str, required=True,
-                        help='(SWD|MSWD|DSWD|GSWD|DGSWD|CRAMER|SINKHORN|ASWD|)')
-    parser.add_argument('--betas',type=float,required=False,default=0.9)
+                        help='(ASWD|SWD|MSWD|DSWD|GSWD|)')
     parser.add_argument('--gpu',type=str,required=False,default=0)
     args = parser.parse_args()
     torch.random.manual_seed(args.seed)
@@ -109,7 +108,7 @@ def main():
     dataset=args.dataset
     model_dir = os.path.join(args.outdir, model_type)
     assert dataset in ['CELEBA', 'CIFAR']
-    assert model_type in ['SWD', 'MSWD', 'DSWD', 'GSWD', 'DGSWD', 'CRAMER','SINKHORN','ASWD']
+    assert model_type in ['ASWD', 'SWD', 'MSWD', 'DSWD', 'GSWD']
     if not (os.path.isdir(args.datadir)):
         os.makedirs(args.datadir)
     if not (os.path.isdir(args.outdir)):
@@ -117,7 +116,7 @@ def main():
     if not (os.path.isdir(model_dir)):
         os.makedirs(model_dir)
     use_cuda = torch.cuda.is_available()
-    device = torch.device("cuda:"+args.gpu if use_cuda else "cpu")
+    device = torch.device("cuda:"+str(args.gpu) if use_cuda else "cpu")
     print('batch size {}\nepochs {}\nAdam lr {} \n using device {}\n'.format(
         args.batch_size, args.epochs, args.lr, device.type
     ))
@@ -158,17 +157,17 @@ def main():
     #model=nn.DataParallel(model)
     #model.to(device)
     dis = Discriminator(64, args.latent_size, 3, 64).to(device)
-    disoptimizer = optim.Adam(dis.parameters(), lr=args.lr, betas=(args.betas, 0.999))
+    disoptimizer = optim.Adam(dis.parameters(), lr=args.lr, betas=(0.5, 0.999))
     if (model_type == 'DSWD' or model_type == 'DGSWD'):
         transform_net = TransformNet(64 * 8 * 4 * 4).to(device)
-        op_trannet = optim.Adam(transform_net.parameters(), lr=0.0005, betas=(args.betas, 0.999))
+        op_trannet = optim.Adam(transform_net.parameters(), lr=0.0005, betas=(0.5, 0.999))
         train_net(64 * 8 * 4 * 4, 1000, transform_net, op_trannet,device=device)
 
     if model_type=='ASWD':
         phi=Mapping(64 * 8 * 4 * 4).to(device)
-        phi_op = optim.Adam(phi.parameters(), lr=0.001, betas=(args.betas, 0.999))
+        phi_op = optim.Adam(phi.parameters(), lr=0.001, betas=(0.5, 0.999))
 
-    optimizer = optim.Adam(model.parameters(), lr=args.lr, betas=(args.betas, 0.999))
+    optimizer = optim.Adam(model.parameters(), lr=args.lr, betas=(0.5, 0.999))
     epoch_cont=0
     generated_sample_number=64
     fixednoise= torch.randn((generated_sample_number, latent_size)).to(device)
@@ -224,7 +223,8 @@ def main():
                     imageio.imwrite(path_1+'/'+args.model_type+'_'+str(args.num_projection)+'_'+str('%03d'%epoch)+'_'+str(1000*j+i)+'.png', img)
             fid_value = calculate_fid_given_paths([path_1+'/',fid_stats_file],50,True,2048)
             fid_recorder[(epoch+1)//interval_]=fid_value
-            np.save(path_0+'/fid_recorder_'+'np_'+str(num_projection)+'_'+str('%03d'%epoch)+'_'+save_idx+'.npy',fid_recorder)
+            np.save(path_0+'/fid_recorder_'+'np_'+str(num_projection)+'.npy',fid_recorder)
+            print('fid score:', fid_value)
             os.system("rm -rf "+path_1)
         total_loss/=(batch_idx+1)
         loss_recorder.append(total_loss)
