@@ -30,7 +30,7 @@ To calculate the [Fréchet Inception Distance (FID score)](https://arxiv.org/abs
 
 are provided at: http://bioinf.jku.at/research/ttur/.
 ## Project & Script Descriptions
-Two experiments are included in this repository, where benchmarks are from the [GSWD paper](http://papers.nips.cc/paper/8319-generalized-sliced-wasserstein-distances) and the [DSWD paper](https://arxiv.org/pdf/2002.07367.pdf), respectively. The first one is on the task of sliced Wasserstein flow, and the second one is on generative modellings with GANs. For more details and setups, please refer to the original paper **[Augmented Sliced Wasserstein Distances](https://arxiv.org/abs/2006.08812)**.
+Two experiments are included in this repository, where benchmarks are from the [GSWD paper](http://papers.nips.cc/paper/8319-generalized-sliced-wasserstein-distances) and the [DSWD paper](https://arxiv.org/pdf/2002.07367.pdf), respectively. The first one is on the task of sliced Wasserstein flow, and the second one is on generative modellings with GANs. For more details and setups, please refer to the original paper.
 
 The sliced Wasserstein flow example can be found in the [jupyter notebook](https://github.com/xiongjiechen/ASWD/blob/master/Sliced%20Waaserstein%20Flow.ipynb).
 
