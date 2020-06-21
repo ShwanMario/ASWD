@@ -65,7 +65,7 @@ python main.py  --model-type ASWD --dataset CIFAR --epochs 200 --num-projection 
 
 ## References 
 ### Code
-The code of generative modelling example is based on the implementation of [DSWD](https://github.com/VinAIResearch/DSW)** by **[VinAI Research](https://github.com/VinAIResearch).
+The code of generative modelling example is based on the implementation of [DSWD](https://github.com/VinAIResearch/DSW) by [VinAI Research](https://github.com/VinAIResearch).
 
 The pytorch code for calculating the FID score is from https://github.com/mseitzer/pytorch-fid.
 
