@@ -1,6 +1,5 @@
 # Augmented-Sliced-Wasserstein-Distances
 
-This repository provides the code to reproduce the experimental results in the paper **[Augmented Sliced Wasserstein Distances](https://arxiv.org/abs/2006.08812)** by **[Xiongjie Chen](https://github.com/xiongjiechen), [Yongxin Yang](https://scholar.google.com/citations?user=F7PtrL8AAAAJ&hl=en&oi=ao)** and **[Yunpeng Li](https://scholar.google.com/citations?user=JzyKdRUAAAAJ&hl=en&oi=ao)**.
 ## Prerequisites
 
 ### Python packages
@@ -36,13 +35,13 @@ Two experiments are included in this repository, where benchmarks are from the [
 The sliced Wasserstein flow example can be found in the [jupyter notebook](https://github.com/xiongjiechen/ASWD/blob/master/Sliced%20Waaserstein%20Flow.ipynb).
 
 The following scripts belong to the generative modelling example:
-- [main.py](https://github.com/xiongjiechen/ASWD/blob/master/main.py) : run this file to conduct experiments.
-- [utils.py](https://github.com/xiongjiechen/ASWD/blob/master/utils.py) : contains implementations of different sliced-based Wasserstein distances.
-- [TransformNet.py](https://github.com/xiongjiechen/ASWD/blob/master/TransformNet.py) : edit this file to modify architectures of neural networks used to map samples. 
-- [experiments.py](https://github.com/xiongjiechen/ASWD/blob/master/experiments.py) : functions for generating and saving randomly generated images.
-- [DCGANAE.py](https://github.com/xiongjiechen/ASWD/blob/master/DCGANAE.py) : neural network architectures and optimization objective for training GANs.
-- [fid_score.py](https://github.com/xiongjiechen/ASWD/blob/master/fid_score.py) : functions for calculating statistics (mean & covariance matrix) of distributions of images and the FID score between two distributions of images.
-- [inception.py](https://github.com/xiongjiechen/ASWD/blob/master/inception.py) : download the pretrained [InceptionV3](https://www.cv-foundation.org/openaccess/content_cvpr_2016/html/Szegedy_Rethinking_the_Inception_CVPR_2016_paper.html) model and generate feature maps for FID evaluation.
+- [main.py](https://anonymous.4open.science/repository/e55153b2-70be-4089-9362-1443ddfaece4/main.py) : run this file to conduct experiments.
+- [utils.py](https://anonymous.4open.science/repository/e55153b2-70be-4089-9362-1443ddfaece4/utils.py) : contains implementations of different sliced-based Wasserstein distances.
+- [TransformNet.py](https://anonymous.4open.science/repository/e55153b2-70be-4089-9362-1443ddfaece4/TransformNet.py) : edit this file to modify architectures of neural networks used to map samples. 
+- [experiments.py](https://anonymous.4open.science/repository/e55153b2-70be-4089-9362-1443ddfaece4/experiments.py) : functions for generating and saving randomly generated images.
+- [DCGANAE.py](https://anonymous.4open.science/repository/e55153b2-70be-4089-9362-1443ddfaece4/DCGANAE.py) : neural network architectures and optimization objective for training GANs.
+- [fid_score.py](https://anonymous.4open.science/repository/e55153b2-70be-4089-9362-1443ddfaece4/id_score.py) : functions for calculating statistics (mean & covariance matrix) of distributions of images and the FID score between two distributions of images.
+- [inception.py](https://anonymous.4open.science/repository/e55153b2-70be-4089-9362-1443ddfaece4/inception.py) : download the pretrained [InceptionV3](https://www.cv-foundation.org/openaccess/content_cvpr_2016/html/Szegedy_Rethinking_the_Inception_CVPR_2016_paper.html) model and generate feature maps for FID evaluation.
 ## Experiment options for the generative modelling example
 The generative modelling experiment evaluates the performances of GANs trained with different sliced-based Wasserstein metrics. To train and evaluate the model, run the following command:
 
