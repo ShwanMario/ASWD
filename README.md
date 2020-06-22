@@ -32,8 +32,14 @@ are provided at: http://bioinf.jku.at/research/ttur/.
 ## Project & Script Descriptions
 Two experiments are included in this repository, where benchmarks are from the [GSWD paper](http://papers.nips.cc/paper/8319-generalized-sliced-wasserstein-distances) and the [DSWD paper](https://arxiv.org/pdf/2002.07367.pdf), respectively. The first one is on the task of sliced Wasserstein flow, and the second one is on generative modellings with GANs. For more details and setups, please refer to the original paper.
 
-The sliced Wasserstein flow example can be found in the [jupyter notebook](https://github.com/xiongjiechen/ASWD/blob/master/Sliced%20Waaserstein%20Flow.ipynb).
+### Directories
+- ```./result/ASWD/CIFAR/``` contains generated imgaes trained with the ASWD on CIFAR10 dataset.
+- ```./result/ASWD/CIFAR/fid/``` FID scores of generated imgaes trained with the ASWD on CIFAR10 dataset are saved in this folder.
+- ```./result/CIFAR/``` model's weights and losses in the CIFAR10 experiment are stored in this directory.
 
+Other setups follow the same naming rule.
+The sliced Wasserstein flow example can be found in the [jupyter notebook](https://github.com/xiongjiechen/ASWD/blob/master/Sliced%20Waaserstein%20Flow.ipynb).
+### Scripts
 The following scripts belong to the generative modelling example:
 - [main.py](https://anonymous.4open.science/repository/e55153b2-70be-4089-9362-1443ddfaece4/main.py) : run this file to conduct experiments.
 - [utils.py](https://anonymous.4open.science/repository/e55153b2-70be-4089-9362-1443ddfaece4/utils.py) : contains implementations of different sliced-based Wasserstein distances.
