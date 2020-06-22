@@ -40,7 +40,7 @@ Two experiments are included in this repository, where benchmarks are from the [
 Other setups follow the same naming rule.
 
 ### Scripts
-The sliced Wasserstein flow example can be found in the [jupyter notebook](https://github.com/xiongjiechen/ASWD/blob/master/Sliced%20Waaserstein%20Flow.ipynb).
+The sliced Wasserstein flow example can be found in the [jupyter notebook](https://anonymous.4open.science/repository/e55153b2-70be-4089-9362-1443ddfaece4/Sliced%20Waaserstein%20Flow.ipynb).
 
 The following scripts belong to the generative modelling example:
 - [main.py](https://anonymous.4open.science/repository/e55153b2-70be-4089-9362-1443ddfaece4/main.py) : run this file to conduct experiments.
