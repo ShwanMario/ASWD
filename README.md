@@ -48,7 +48,7 @@ The following scripts belong to the generative modelling example:
 - [TransformNet.py](https://anonymous.4open.science/repository/e55153b2-70be-4089-9362-1443ddfaece4/TransformNet.py) : edit this file to modify architectures of neural networks used to map samples. 
 - [experiments.py](https://anonymous.4open.science/repository/e55153b2-70be-4089-9362-1443ddfaece4/experiments.py) : functions for generating and saving randomly generated images.
 - [DCGANAE.py](https://anonymous.4open.science/repository/e55153b2-70be-4089-9362-1443ddfaece4/DCGANAE.py) : neural network architectures and optimization objective for training GANs.
-- [fid_score.py](https://anonymous.4open.science/repository/e55153b2-70be-4089-9362-1443ddfaece4/id_score.py) : functions for calculating statistics (mean & covariance matrix) of distributions of images and the FID score between two distributions of images.
+- [fid_score.py](https://anonymous.4open.science/repository/e55153b2-70be-4089-9362-1443ddfaece4/fid_score.py) : functions for calculating statistics (mean & covariance matrix) of distributions of images and the FID score between two distributions of images.
 - [inception.py](https://anonymous.4open.science/repository/e55153b2-70be-4089-9362-1443ddfaece4/inception.py) : download the pretrained [InceptionV3](https://www.cv-foundation.org/openaccess/content_cvpr_2016/html/Szegedy_Rethinking_the_Inception_CVPR_2016_paper.html) model and generate feature maps for FID evaluation.
 ## Experiment options for the generative modelling example
 The generative modelling experiment evaluates the performances of GANs trained with different sliced-based Wasserstein metrics. To train and evaluate the model, run the following command:
