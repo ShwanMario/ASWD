@@ -38,8 +38,10 @@ Two experiments are included in this repository, where benchmarks are from the [
 - ```./result/CIFAR/``` model's weights and losses in the CIFAR10 experiment are stored in this directory.
 
 Other setups follow the same naming rule.
-The sliced Wasserstein flow example can be found in the [jupyter notebook](https://github.com/xiongjiechen/ASWD/blob/master/Sliced%20Waaserstein%20Flow.ipynb).
+
 ### Scripts
+The sliced Wasserstein flow example can be found in the [jupyter notebook](https://github.com/xiongjiechen/ASWD/blob/master/Sliced%20Waaserstein%20Flow.ipynb).
+
 The following scripts belong to the generative modelling example:
 - [main.py](https://anonymous.4open.science/repository/e55153b2-70be-4089-9362-1443ddfaece4/main.py) : run this file to conduct experiments.
 - [utils.py](https://anonymous.4open.science/repository/e55153b2-70be-4089-9362-1443ddfaece4/utils.py) : contains implementations of different sliced-based Wasserstein distances.
