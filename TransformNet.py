@@ -15,7 +15,6 @@ class Mapping(nn.Module):
         self.net = nn.Sequential(nn.Linear(self.size, self.size))
     def forward(self, inputs):
         outputs =self.net(inputs)
-        outputs =torch.sigmoid(outputs)
         return torch.cat((inputs,outputs),dim=-1)#/torch.sqrt(torch.sum(out**2,dim=1,keepdim=True))
 class Mapping_Conv(nn.Module):
     def __init__(self,size):
