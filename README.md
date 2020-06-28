@@ -69,7 +69,7 @@ python main.py  --model-type ASWD --dataset CIFAR --epochs 200 --num-projection 
 <summary> Sliced Wasserstein flow </summary>
 We conduct the sliced Wasserstein flow experiment on eight different datasets and the experimental results are presented in the following figure. The first and third columns in the figure below are target distributions. The second and fourth columns are log 2-Wasserstein distances between the target distribution and the source distribution. The horizontal axis show the number of training iterations. Solid lines and shaded areas represent the average values and 95% confidence intervals of log 2-Wasserstein distances over 50 runs.
 
-![test](https://github.com/ShwanMario/ASWD/tree/master/images/swf.PNG)
+![test](https://github.com/ShwanMario/ASWD/blob/master/images/swf.PNG)
 
 </details>
 
@@ -78,11 +78,11 @@ We conduct the sliced Wasserstein flow experiment on eight different datasets an
 
 The table below provides FID scores of generative models trained with different distance metrics. Lower scores indicate better image qualities. In what follows, *L* is the number of projections, we run each experiment 10 times and report the average values and standard errors of FID scores for CIFAR10 dataset and CELEBA dataset. The running time per training iteration for one batch containing 512 samples is computed based on a computer with an Intel (R) Xeon (R) Gold 5218 CPU 2.3 GHz and 16GB of RAM, and a RTX 6000 graphic card with 22GB memories.
 
-![test](https://github.com/ShwanMario/ASWD/tree/master/images/GANs_tab.PNG)
+![test](https://github.com/ShwanMario/ASWD/blob/master/images/GANs_tab.PNG)
 
 With *L*=1000 projections, the following figure shows the convergence rate of FID scores of generative models trained with different metrics on CIFAR10 and CELEBA datasets. The error bar represents the standard deviation of the FID scores at the specified training epoch among 10 simulation runs.
 
-![test](https://github.com/ShwanMario/ASWD/tree/master/images/GANs_fig.PNG)
+![test](https://github.com/ShwanMario/ASWD/blob/master/images/GANs_fig.PNG)
 </details>
 
 ## References 
