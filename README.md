@@ -25,7 +25,7 @@ To calculate the [Fréchet Inception Distance (FID score)](https://arxiv.org/abs
 
 are provided at: http://bioinf.jku.at/research/ttur/.
 ## Project & Script Descriptions
-Two experiments are included in this repository, where benchmarks are from the paper [Generalized Sliced Wasserstein Distances](http://papers.nips.cc/paper/8319-generalized-sliced-wasserstein-distances) and the paper [Distributional Sliced-Wasserstein and Applications to Generative Modeling](https://arxiv.org/pdf/2002.07367.pdf), respectively. The first one is on the task of sliced Wasserstein flow, and the second one is on generative modellings with GANs. For more details and setups, please refer to the original paper **[Augmented Sliced Wasserstein Distances](https://arxiv.org/abs/2006.08812)**.
+Two experiments are included in this repository, where benchmarks are from the paper [Generalized Sliced Wasserstein Distances](http://papers.nips.cc/paper/8319-generalized-sliced-wasserstein-distances) and the paper [Distributional Sliced-Wasserstein and Applications to Generative Modeling](https://arxiv.org/pdf/2002.07367.pdf), respectively. The first one is on the task of sliced Wasserstein flow, and the second one is on generative modellings with GANs. For more details and setups, please refer to the original paper **Augmented Sliced Wasserstein Distances**.
 ### Directories
 - ```./result/ASWD/CIFAR/``` contains generated imgaes trained with the ASWD on CIFAR10 dataset.
 - ```./result/ASWD/CIFAR/fid/``` FID scores of generated imgaes trained with the ASWD on CIFAR10 dataset are saved in this folder.
