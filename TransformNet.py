@@ -12,7 +12,7 @@ class Mapping(nn.Module):
     def __init__(self, size):
         super(Mapping, self).__init__()
         self.size = size
-        self.net = nn.Sequential(nn.Linear(self.size, self.size),nn.ReLU())
+        self.net = nn.Sequential(nn.Linear(self.size, self.size),nn.LeakyReLU(0.5))
     def forward(self, inputs):
         outputs =self.net(inputs)
         return torch.cat((inputs,outputs),dim=-1)#/torch.sqrt(torch.sum(out**2,dim=1,keepdim=True))
