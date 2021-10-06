@@ -84,8 +84,10 @@ def augmented_sliced_wassersten_distance(first_samples, second_samples, num_proj
     for _ in range(max_iter):
         first_samples_transform = phi(first_samples_detach)
         second_samples_transform = phi(second_samples_detach)
-        reg = lam * (torch.norm(first_samples_transform, p=2, dim=1) + torch.norm(second_samples_transform, p=2,
-                                                                                  dim=1)).mean()
+#         reg = lam * (torch.norm(first_samples_transform, p=2, dim=1) + torch.norm(second_samples_transform, p=2,
+#                                                                                   dim=1)).mean()
+        reg = lam * ((torch.norm(first_samples_transform, p=2, dim=1)**2).mean()**0.5 + (torch.norm(second_samples_transform, p=2,
+                                                                                  dim=1)**2).mean()**0.5)
         projections = rand_projections(first_samples_transform.shape[-1], num_projections).to(device)
         encoded_projections = first_samples_transform.matmul(projections.transpose(0, 1))
         distribution_projections = (second_samples_transform.matmul(projections.transpose(0, 1)))
