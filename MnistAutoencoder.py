@@ -69,7 +69,7 @@ class MnistAutoencoder(nn.Module):
         data = minibatch.to(self.device)
         z_prior = rand_dist((data.shape[0], self.latent_size)).to(self.device)
         data_fake = self.decoder(z_prior)
-        tgswd = transformed_generalized_sliced_wassersten_distance(data.view(data.shape[0], -1), data_fake.view(data.shape[0], -1),
+        tgswd = augmented_sliced_wassersten_distance(data.view(data.shape[0], -1), data_fake.view(data.shape[0], -1),
                                            num_projections, phi, phi_op,
                                            device=self.device,max_iter=max_iter,p=p,lam=lam,net_type=net_type)
 
