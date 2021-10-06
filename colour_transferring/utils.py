@@ -124,8 +124,10 @@ def transform_ASW(src,target,src_label,origin,n,p=2,lam=0.01):
         first_samples_transform = phi(source_values_cuda)
         second_samples_transform = phi(target_values_cuda)
         
-        reg = lam * (torch.norm(first_samples_transform, p=p, dim=1) + torch.norm(second_samples_transform, p=p,
-                                                                                  dim=1)).mean()
+#         reg = lam * (torch.norm(first_samples_transform, p=p, dim=1) + torch.norm(second_samples_transform, p=p,
+#                                                                                   dim=1)).mean()
+        reg = lam * ((torch.norm(first_samples_transform, p=2, dim=1)**2).mean()**0.5 + (torch.norm(second_samples_transform, p=2,
+                                                                                  dim=1)**2).mean()**0.5)
         projections = rand_projections(first_samples_transform.shape[-1], n).to('cuda')
         encoded_projections = first_samples_transform.matmul(projections.transpose(0, 1))
         distribution_projections = second_samples_transform.matmul(projections.transpose(0, 1))
