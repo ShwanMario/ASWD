@@ -2,6 +2,6 @@ torch==1.7.0
 torchvision==0.8.0
 cupy==7.4.0
 cudatoolkit==10.2.89
-numpy==1.19.2
+numpy==1.22.0
 pot==0.7.0
 imageio==2.9.0
